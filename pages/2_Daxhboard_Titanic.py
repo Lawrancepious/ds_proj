@@ -21,13 +21,13 @@ st.image(img)
 
 df = pd.read_csv(data_path)
 
-species=st.selection("select the gender:",df['species'].unique())
+species=st.selectbox("select the gender:",df['Sex'].unique())
 col1,col2=st.columns(2)
 
-fig_1=px.histogram(df[df["gender"]==species],x="Sex")
-c0l1.plotly_chart(fig_1,use_container_width=true)
+fig_1=px.histogram(df[df["Sex"]==species],x="Sex")
+col1.plotly_chart(fig_1,use_container_width=True)
 
 
-fig_1=px.box(df[df["gender"]==species],x="Sex")
-c0l2.plotly_chart(fig_1,use_container_width=true)
+fig_1=px.box(df[df["Sex"]==species],x="Sex")
+col2.plotly_chart(fig_1,use_container_width=True)
 

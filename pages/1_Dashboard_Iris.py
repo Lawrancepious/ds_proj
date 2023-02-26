@@ -20,14 +20,14 @@ st.image(img)
 
 df = pd.read_csv(data_path)
 
-species=st.selection("select the species:",df['species'].unique())
+species=st.selectbox("select the species:",df['Species'].unique())
 col1,col2=st.columns(2)
 
-fig_1=px.histogram(df[df["species"]==species],x="sepallengthcm")
-c0l1.plotly_chart(fig_1,use_container_width=true)
+fig_1=px.histogram(df[df["Species"]==species],x="SepalLengthCm")
+col1.plotly_chart(fig_1,use_container_width=True)
 
 
-fig_1=px.box(df[df["species"]==species],x="sepallengthcm")
-c0l2.plotly_chart(fig_1,use_container_width=true)
+fig_1=px.box(df[df["Species"]==species],x="SepalLengthCm")
+col2.plotly_chart(fig_1,use_container_width=True)
 
 
