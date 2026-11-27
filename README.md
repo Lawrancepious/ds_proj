@@ -1,8 +1,23 @@
-# Iris & Titanic: Interactive Data Science App
+<div align="center">
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://lawrancepious-ds-proj-app-uiywhr.streamlit.app/)
+<img src="assets/header.svg" alt="Iris & Titanic: interactive data science app" width="100%">
 
-**Live app: https://lawrancepious-ds-proj-app-uiywhr.streamlit.app/**
+<img src="assets/typing.svg" alt="Explore iris flowers, analyse Titanic passengers, train ML models, ask Gemini">
+
+<a href="https://lawrancepious-ds-proj-app-uiywhr.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit"></a>
+&nbsp;
+<img src="https://img.shields.io/badge/Python-3.9%2B-E63946?logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/Streamlit-app-E63946?logo=streamlit&logoColor=white" alt="Streamlit">
+<img src="https://img.shields.io/badge/scikit--learn-ML-E63946?logo=scikitlearn&logoColor=white" alt="scikit-learn">
+<img src="https://img.shields.io/badge/Gemini-AI-E63946?logo=googlegemini&logoColor=white" alt="Gemini">
+
+**[Open the live app](https://lawrancepious-ds-proj-app-uiywhr.streamlit.app/)**
+
+<img src="assets/demo.gif" alt="Demo of the app pages" width="90%">
+
+</div>
+
+<img src="assets/divider.svg" width="100%" alt="">
 
 An interactive [Streamlit](https://streamlit.io) app that explores two classic datasets, trains
 machine-learning models in the browser, and lets you **chat with the data using Google Gemini**.
@@ -16,7 +31,7 @@ and AI features.
 |---|---|
 | **Overview** | Key numbers for both datasets and quick links. |
 | **Iris dashboard** | Filter by species. Histograms, box and violin plots, scatter matrix, correlation heatmap, per-species statistics, CSV download. |
-| **Titanic dashboard** | Sidebar filters (sex, class, port). Age and fare distributions, class/sex/age sunburst, passenger titles extracted from names, family-size analysis, CSV download. |
+| **Titanic dashboard** | Pill filters (sex, class, port). Age and fare distributions, class/sex sunburst, passenger titles extracted from names, family-size analysis, CSV download. |
 | **Iris classifier** | Compares 5 models with 5-fold cross-validation, trains the one you pick, and shows a confusion matrix and feature importance. Sliders let you describe a new flower and get a live prediction. |
 | **Ask your data** | A chat with Gemini. The full dataset is sent as context, so answers come from the actual rows. |
 
@@ -33,6 +48,8 @@ Each dashboard and the classifier also has an **AI insights** button, where Gemi
 - Animations turn off automatically if your system has *reduce motion* enabled.
 
 All custom styling lives in [`core/ui.py`](core/ui.py).
+
+<img src="assets/divider.svg" width="100%" alt="">
 
 ## Quick start
 
@@ -59,6 +76,8 @@ The app opens at http://localhost:8501.
 `secrets.toml` is listed in `.gitignore`, so your key is never committed.
 Everything except the AI buttons and the chat works without a key.
 
+<img src="assets/divider.svg" width="100%" alt="">
+
 ## Project structure
 
 ```
@@ -74,10 +93,13 @@ views/
   iris_classifier.py
   ask_ai.py
 resources/                # datasets and images
+assets/                   # animated SVGs + demo GIF for this README
 .streamlit/
   config.toml             # red dark theme, fonts, chart palette
   secrets.toml.example    # template for your API key
 ```
+
+<img src="assets/divider.svg" width="100%" alt="">
 
 ## Data
 
@@ -92,6 +114,8 @@ resources/                # datasets and images
 
 Engineered Titanic features: `Title` (Mr/Mrs/Miss/Master/Rare), `FamilySize`, `TravelType`,
 `Deck`, `AgeGroup`, `Class`, `Port`.
+
+<img src="assets/divider.svg" width="100%" alt="">
 
 ## Tech stack
 

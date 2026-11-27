@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="2400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4A060D"/>
+      <stop offset="0.25" stop-color="#B3121F"/>
+      <stop offset="0.5" stop-color="#E63946"/>
+      <stop offset="0.75" stop-color="#B3121F"/>
+      <stop offset="1" stop-color="#4A060D"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="0 0; -1200 0; 0 0" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1200" height="320" rx="28"/></clipPath>
+    <style>
+      .title { font: 800 64px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #fff;
+               animation: rise 1.1s ease-out; }
+      .sub   { font: 400 24px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #FFE3E6;
+               animation: rise 1.4s ease-out; }
+      .chip  { animation: rise 1.7s ease-out; }
+      .chip text { font: 600 15px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #fff; }
+      .chip rect { fill: #fff; fill-opacity: .16; }
+      .sweep { animation: sweep 5s ease-in-out infinite; }
+      .bar   { transform-box: fill-box; transform-origin: bottom; animation: grow 3.2s ease-in-out infinite; }
+      .dot   { animation: floaty 7s ease-in-out infinite; }
+      @keyframes rise  { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: none } }
+      @keyframes sweep { 0% { transform: translateX(-500px) } 60%,100% { transform: translateX(1500px) } }
+      @keyframes grow  { 0%,100% { transform: scaleY(.35) } 50% { transform: scaleY(1) } }
+      @keyframes floaty{ 0%,100% { transform: translateY(0); opacity: .15 } 50% { transform: translateY(-26px); opacity: .45 } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+
+    <!-- floating particles -->
+    <g fill="#fff">
+      <circle class="dot" cx="90"  cy="260" r="6"  style="animation-delay:0s"/>
+      <circle class="dot" cx="380" cy="290" r="4"  style="animation-delay:1.2s"/>
+      <circle class="dot" cx="620" cy="40"  r="5"  style="animation-delay:2.4s"/>
+      <circle class="dot" cx="760" cy="280" r="7"  style="animation-delay:.6s"/>
+      <circle class="dot" cx="1150" cy="60" r="5"  style="animation-delay:3s"/>
+      <circle class="dot" cx="540" cy="250" r="3"  style="animation-delay:4s"/>
+      <circle class="dot" cx="30"  cy="50"  r="4"  style="animation-delay:5s"/>
+    </g>
+
+    <!-- animated bar chart -->
+    <g transform="translate(880 70)">
+      <rect x="0"   y="0" width="250" height="190" rx="18" fill="#000" fill-opacity=".18"/>
+      <g fill="#fff">
+        <rect class="bar" x="30"  y="40" width="26" height="125" rx="6" fill-opacity=".95" style="animation-delay:0s"/>
+        <rect class="bar" x="70"  y="40" width="26" height="125" rx="6" fill-opacity=".75" style="animation-delay:.4s"/>
+        <rect class="bar" x="110" y="40" width="26" height="125" rx="6" fill-opacity=".95" style="animation-delay:.8s"/>
+        <rect class="bar" x="150" y="40" width="26" height="125" rx="6" fill-opacity=".75" style="animation-delay:1.2s"/>
+        <rect class="bar" x="190" y="40" width="26" height="125" rx="6" fill-opacity=".95" style="animation-delay:1.6s"/>
+      </g>
+      <line x1="22" y1="166" x2="228" y2="166" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+    </g>
+
+    <text class="title" x="70" y="135">Iris &amp; Titanic</text>
+    <text class="sub" x="72" y="180">Interactive data science app · Machine learning · Gemini AI</text>
+
+    <g class="chip"><rect x="70" y="214" width="104" height="32" rx="16"/><text x="122" y="235" text-anchor="middle">Streamlit</text></g>
+    <g class="chip"><rect x="184" y="214" width="116" height="32" rx="16"/><text x="242" y="235" text-anchor="middle">scikit-learn</text></g>
+    <g class="chip"><rect x="310" y="214" width="78" height="32" rx="16"/><text x="349" y="235" text-anchor="middle">Plotly</text></g>
+    <g class="chip"><rect x="398" y="214" width="138" height="32" rx="16"/><text x="467" y="235" text-anchor="middle">Google Gemini</text></g>
+
+    <g transform="skewX(-18)"><rect class="sweep" x="0" y="0" width="320" height="320" fill="url(#sweep)"/></g>
+  </g>
+</svg>
