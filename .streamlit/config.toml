@@ -1,0 +1,25 @@
+[theme]
+base = "dark"
+primaryColor = "#E63946"
+backgroundColor = "#0F0A0B"
+secondaryBackgroundColor = "#1C1214"
+textColor = "#F6ECEE"
+borderColor = "#3A2328"
+linkColor = "#FF6B78"
+redColor = "#E63946"
+baseRadius = "0.75rem"
+buttonRadius = "full"
+showWidgetBorder = true
+font = "Poppins:https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+# red-led categorical palette that stays distinguishable on dark backgrounds
+chartCategoricalColors = ["#E63946", "#F4A261", "#A8DADC", "#FF8FA3", "#FFD166", "#9D4EDD", "#2A9D8F", "#B5838D", "#F1FAEE", "#9D0208"]
+chartSequentialColors = ["#2B0A0E", "#4A0E15", "#6A111C", "#8B1523", "#AC1A2B", "#CC2034", "#E63946", "#EE6B75", "#F59DA3", "#FCCFD2"]
+
+[theme.sidebar]
+backgroundColor = "#170D0F"
+secondaryBackgroundColor = "#24161A"
+borderColor = "#3A2328"
+
+[client]
+toolbarMode = "minimal"
